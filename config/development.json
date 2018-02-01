@@ -1,0 +1,27 @@
+{
+  "knex": {
+    "connection": {
+      "database": "thesis_devel"
+    }
+  },
+
+  "passport": {
+    "Google": {
+      "clientID": "768304753774-u9fmufqrevkk4sv0uu058jtvab4aiqk9.apps.googleusercontent.com",
+      "clientSecret": "vHdd3peaJtVGMh5O6ioOmaX-",
+      "callbackURL": "http://localhost:3000/auth/google/login"
+    },
+
+    "Facebook": {
+      "clientID": "157152631602690",
+      "clientSecret": "3ad33a73a658825504ebe401d2cff174",
+      "callbackURL": "http://localhost:3000/auth/facebook/login"
+    },
+
+    "Twitter": {
+      "consumerKey": "eUZGqkylX2riPx4Ix0T4l78R8",
+      "consumerSecret": "kU1NWDS67wLguqsuSCn0MRpDUTwoHOK2UVg0fG111ZwHgr9q8r",
+      "callbackURL": "http://localhost:3000/auth/twitter/login"
+    }
+  }
+}
