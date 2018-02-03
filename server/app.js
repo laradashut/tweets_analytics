@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const middleware = require('./middleware');
 const routes = require('./routes');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -23,5 +24,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', routes.auth);
 app.use('/api', routes.api);
 app.use('/api/profiles', routes.profiles);
+app.use('/tweets', routes.tweets);
+app.use('/brands', routes.brands);
 
 module.exports = app;

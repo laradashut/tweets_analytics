@@ -12200,6 +12200,22 @@ var _store = __webpack_require__(!(function webpackMissingModule() { var e = new
 
 var _store2 = _interopRequireDefault(_store);
 
+var _App = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/App\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _App2 = _interopRequireDefault(_App);
+
+var _Home = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/Home\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _Tweets = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/Tweets\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _Tweets2 = _interopRequireDefault(_Tweets);
+
+var _Profile = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/Profile\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _Profile2 = _interopRequireDefault(_Profile);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var router = _react2.default.createElement(
@@ -12207,17 +12223,17 @@ var router = _react2.default.createElement(
   { store: _store2.default },
   _react2.default.createElement(
     _reactRouter.Router,
-    { history: _reactRouter.browserHistory },
+    { history: _store.history },
     _react2.default.createElement(
       _reactRouter.Route,
-      { path: '/', component: Main },
-      _react2.default.createElement(_reactRouter.IndexRoute, { component: Home }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/tweets', component: Tweets }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/settings', component: Settings }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: Profile })
+      { path: '/', component: _App2.default },
+      _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/tweets', component: _Tweets2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _Profile2.default })
     )
   )
-);
+); //binding to use redux with react
+
 
 _reactDom2.default.render(router, document.getElementById('app'));
 

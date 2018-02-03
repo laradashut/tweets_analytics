@@ -1,12 +1,13 @@
 # Project Name
 
-Tweets analytics for business and marketing purposes.
-
-As a Twitter Advertiser I want to know what the ratio of positive to negative tweets about my brand over the last 3 month by 5 min increments_
+The project description
 
 ## Team
 
-- Lara Dashut
+- teamMember
+- teamMember
+- teamMember
+- teamMember
 
 ## Roadmap
 
@@ -33,8 +34,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 - Node 6.9.x
 - Redis 3.2.x
 - Postgresql 9.6.x
-- React, redux
-- Sockets.io
+- etc
 
 ## Development
 
@@ -46,11 +46,22 @@ brew install redis
 brew install postgresql
 ```
 
+Yarn is a replacement for npm. It's faster and *guarantees* consistency -- as you deploy your code in various environments, you won't run the risk of slight variations in what gets installed.
+
 ### Install Project Dependencies
 
 ```
 yarn global add grunt-cli knex eslint
 ```
+
+## App Configuration
+
+Override settings `config/default.json` in any environment by making a copy of `config/ENV.example.json` and naming it `config/ENV.json` and setting the appropriate variable. 
+
+For environments that require use of environment variables, you can supply variables as defined in `config/custom-environment-variables.json`.
+
+See https://www.npmjs.com/package/config
+And https://github.com/lorenwest/node-config/wiki/Environment-Variables#custom-environment-variables
 
 ## Database Initialization
 
@@ -91,3 +102,5 @@ To run server: `yarn run start`
 To run tests: `yarn run test`
 
 To run your redis server for the session store `redis-server`
+
+
